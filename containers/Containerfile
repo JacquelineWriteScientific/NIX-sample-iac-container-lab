@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-LABEL project="NIX-sample-iac-container-lab"
+LABEL project="alpine-nginx-container-lab"
 LABEL purpose="local container sandbox artifact"
 
 EXPOSE 80
