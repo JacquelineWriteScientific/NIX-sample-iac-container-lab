@@ -1,0 +1,26 @@
+service:
+  name: apex-sample-web
+  runtime: podman
+  image: nginx:alpine
+  bind_address: 127.0.0.1
+  host_port: 8080
+  container_port: 80
+
+sandbox:
+  host_os: Fedora
+  runtime_scope: local_only
+  network_mode: localhost_binding
+
+security:
+  run_rootless: true
+  expose_publicly: false
+  bind_to_localhost_only: true
+  secrets_in_repo: false
+
+live_runtime_requirements:
+  requires_runtime: podman
+  requires_available_host_port: 8080
+  requires_explicit_port_binding: true
+  requires_firewall_review_if_public: true
+  requires_tls_if_public: true
+  requires_secrets_management_if_credentials_added: true
