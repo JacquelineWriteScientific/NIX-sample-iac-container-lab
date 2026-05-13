@@ -1,4 +1,4 @@
-# NIX Sample IaC Container Lab
+# alpine-nginx-container-lab
 
 ## Overview
 
